@@ -1,0 +1,384 @@
+@charset "UTF-8";
+/* BOOTSTRAP BREAKPOINTS 
+Breakpoint	Class infix	Dimensions
+X-Small	None    <576px
+Small	sm	    ≥576px
+Medium	md	    ≥768px
+Large	lg	    ≥992px
+Extra large	xl	≥1200px
+Extra extra large	xxl	≥1400px */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* COLOUR PALETTE */
+/* OUTER PADDING */
+/* INNER SPACING */
+/* TYPOGRAPHY */
+h1, h2, h3 {
+  font-family: "Montserrat", serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  color: #C51605;
+}
+
+h5 {
+  font-family: "Public Sans", serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+p {
+  font-family: "Public Sans", serif;
+  font-size: 1rem;
+}
+
+.divider {
+  display: flex;
+  width: 300px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.divider::before, .divider::after {
+  flex: 1;
+  content: "";
+  border-bottom: 4px dotted #C51605;
+  margin: 5px;
+}
+
+label {
+  font-weight: bold;
+}
+
+label, input, textarea, td {
+  font-family: "Public Sans", serif;
+  font-size: 14px;
+}
+
+/* BUTTONS */
+.btn {
+  font-family: "Public Sans", serif;
+  font-size: 14px;
+  padding: 10px 18px;
+  width: 120px;
+}
+
+.btn-light {
+  border-radius: 0;
+  color: white;
+  border: 4px solid #FAE7C9;
+  background-color: transparent;
+}
+
+.btn-light:hover {
+  background-color: #FAE7C9;
+  border: 4px solid #FAE7C9;
+}
+
+.btn-dark {
+  background-color: #432818;
+  border: none;
+  border-radius: 1rem;
+}
+
+.btn-dark:hover {
+  background-color: #432818;
+  border: none;
+}
+
+/* FOUNDATION OF HAMBURGER STYLE */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+/* CSS FOR WHEN SCREEN IS 992PX OR LARGER - BOOTSTRAP MEDIUM */
+@media only screen and (min-width: 992px) {
+  .hamburger {
+    display: none;
+  }
+}
+/* CHANGE APPEARANCE WHEN HAMBURGER CLICKED */
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  /* CHANGE COLOUR OF ACTIVE AMBURGER */
+  background-color: #FAE7C9;
+}
+
+.hamburger-box {
+  /* CHANGE WIDTH OF HAMBURGER BOX */
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  /* CHANGE WIDTH OF HAMBURGER */
+  width: 30px;
+  height: 4px;
+  /* CHANGE COLOUR OF HAMBURGER */
+  background-color: #FAE7C9;
+  /* CHANGE ROUNDNESS OF HAMBURGER */
+  border-radius: 0px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/* SLIDER */
+.hamburger-slider .hamburger-inner {
+  top: 2px;
+}
+
+.hamburger-slider .hamburger-inner::before {
+  top: 10px;
+  transition-property: transform, opacity;
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+}
+
+.hamburger-slider .hamburger-inner::after {
+  top: 20px;
+}
+
+.hamburger-slider.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger-slider.is-active .hamburger-inner::before {
+  transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+  opacity: 0;
+}
+
+.hamburger-slider.is-active .hamburger-inner::after {
+  transform: translate3d(0, -20px, 0) rotate(-90deg);
+}
+
+/* NAVIGATION BAR */
+.navbar {
+  z-index: 100;
+  width: 100%;
+  position: fixed;
+  padding: 15px;
+  background-color: #432818;
+  transition: ease 0.5s;
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar .nav-item a {
+  color: white;
+  opacity: 0.5;
+}
+
+.navbar .nav-item a:hover {
+  opacity: 1;
+  transition: ease 0.5s;
+}
+
+.show {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar > .container-fluid {
+  padding: 0;
+}
+
+.container {
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+.container-fluid {
+  padding: 4rem;
+}
+
+.container-dark {
+  background-color: #FAE7C9;
+}
+
+.center {
+  text-align: center;
+}
+
+/* LANDING PAGE SECTION */
+.landing-page {
+  padding: 0;
+  background: black;
+}
+
+.landing-page p {
+  font-size: 1.2rem;
+}
+
+.landing-page img {
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: opacity(80%);
+}
+
+.landing-page-inner {
+  width: 100%;
+  padding: 2rem;
+  position: absolute;
+  top: calc(50vh - 90px);
+  text-align: center;
+  color: white;
+}
+
+/* CARD, COLUMNS AND TABLE SPACING */
+.card-group {
+  margin-top: 2rem;
+}
+
+.row {
+  margin: 0;
+  --bs-gutter-x: 0;
+}
+
+.row .card {
+  margin-bottom: 2rem;
+}
+
+.card {
+  border-radius: 0px;
+  border: none;
+  padding: 1rem;
+}
+
+.card:not(:last-child) {
+  justify-content: space-between;
+}
+
+.card:not(:last-child), .col-sm-4:not(:last-child), .col-md-6:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.card-img, .card-img-top {
+  border-radius: 0px;
+}
+
+.col-sm-4, .col-md-6 {
+  padding: 1rem;
+}
+
+.col-md-6 img {
+  width: 100%;
+}
+
+/* FORMS */
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  font-family: "Public Sans", serif;
+  font-size: 14px;
+  padding: 10px 18px;
+  width: 120px;
+  color: white;
+  background-color: #432818;
+  border: none;
+  border-radius: 1rem;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #FAE7C9;
+}
+
+/* FOOTER */
+footer {
+  background: #432818;
+  color: white;
+}
+
+footer h3 {
+  color: #FAE7C9;
+}
+
+.table {
+  color: white;
+}
+
+footer .col-md-6 {
+  padding: 2rem;
+}
+
+.copyright-banner {
+  background: black;
+  color: white;
+  height: 50px;
+  text-align: center;
+  font-family: "Public Sans", sans-serif;
+  height: 100%;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}/*# sourceMappingURL=landing-page.css.map */
