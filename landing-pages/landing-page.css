@@ -391,8 +391,17 @@ label, input, textarea, td {
   --bs-gutter-x: 0;
 }
 
+.row img {
+  width: 100%;
+}
+
 .row .card {
   margin-bottom: 2rem;
+}
+
+.no-space .col-md-6 {
+  padding: 0;
+  margin-bottom: 0 !important;
 }
 
 .card {
