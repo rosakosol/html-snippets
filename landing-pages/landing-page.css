@@ -51,6 +51,16 @@ p {
   font-size: 1rem;
 }
 
+i {
+  padding: 5px;
+  margin-right: 10px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
 .divider {
   display: flex;
   width: 300px;
@@ -79,7 +89,7 @@ label, input, textarea, td {
   font-family: "Public Sans", serif;
   font-size: 14px;
   padding: 10px 18px;
-  width: 120px;
+  width: 140px;
 }
 
 .btn-light {
@@ -103,6 +113,25 @@ label, input, textarea, td {
 .btn-dark:hover {
   background-color: #432818;
   border: none;
+  transform: translateY(-4px);
+  transition: ease 0.2s;
+}
+
+.btn-link {
+  color: #C51605;
+  text-decoration: none;
+  padding: 0;
+  text-align: left;
+}
+
+.btn-link:hover {
+  color: #C51605;
+  transform: translateY(-4px);
+  transition: ease 0.2s;
+}
+
+.bi::before {
+  vertical-align: -4px;
 }
 
 /* FOUNDATION OF HAMBURGER STYLE */
@@ -288,6 +317,10 @@ label, input, textarea, td {
   margin-top: 2rem;
 }
 
+.card-group .btn {
+  margin: 0 auto;
+}
+
 .row {
   margin: 0;
   --bs-gutter-x: 0;
@@ -341,7 +374,7 @@ input[type=submit] {
   font-family: "Public Sans", serif;
   font-size: 14px;
   padding: 10px 18px;
-  width: 120px;
+  width: 140px;
   color: white;
   background-color: #432818;
   border: none;
@@ -350,21 +383,30 @@ input[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #FAE7C9;
+  transform: translateY(-4px);
+  transition: ease 0.2s;
 }
 
 /* FOOTER */
 footer {
   background: #432818;
-  color: white;
+  color: #FAE7C9;
 }
 
 footer h3 {
+  color: white;
+}
+
+footer a {
+  color: #FAE7C9;
+}
+
+footer a:hover {
   color: #FAE7C9;
 }
 
 .table {
-  color: white;
+  color: #FAE7C9;
 }
 
 footer .col-md-6 {

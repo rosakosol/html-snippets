@@ -62,6 +62,16 @@ p {
     font-size: 1rem;
 }
 
+i {
+  padding: 5px;
+  margin-right: 10px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
 .divider {
     display: flex;
     width: 300px;
@@ -91,7 +101,7 @@ label, input, textarea, td {
   font-family: 'Public Sans', serif;
   font-size: 14px;
   padding: 10px 18px;
-  width: 120px;
+  width: 140px;
 }
 
 .btn-light {
@@ -115,6 +125,25 @@ label, input, textarea, td {
 .btn-dark:hover {
   background-color: $primary;
   border: none;
+  transform: translateY(-4px);
+  transition: ease 0.2s;
+}
+
+.btn-link {
+  color: $tertiary;
+  text-decoration: none;
+  padding: 0;
+  text-align: left;
+}
+
+.btn-link:hover {
+  color: $tertiary;
+  transform: translateY(-4px);
+  transition: ease 0.2s;
+}
+
+.bi::before {
+  vertical-align: -4px;
 }
 
 /* FOUNDATION OF HAMBURGER STYLE */
@@ -289,6 +318,10 @@ bottom: -10px;
   margin-top: $padding-sm;
 }
 
+.card-group .btn {
+  margin: 0 auto;
+}
+
 .row {
   margin: 0;
   --bs-gutter-x: 0;
@@ -344,7 +377,7 @@ input[type=submit] {
   font-family: 'Public Sans', serif;
   font-size: 14px;
   padding: 10px 18px;
-  width: 120px;
+  width: 140px;
   color: white;
   background-color: $primary;
   border: none;
@@ -353,21 +386,30 @@ input[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: $secondary;
+  transform: translateY(-4px);
+  transition: ease 0.2s;
 }
 
 /* FOOTER */
 footer {
   background: $primary;
-  color: white;
+  color: $secondary;
 }
 
 footer h3 {
+  color: white;
+}
+
+footer a {
+  color: $secondary;
+}
+
+footer a:hover {
   color: $secondary;
 }
 
 .table {
-  color: white;
+  color: $secondary;
 }
 
 footer .col-md-6 {

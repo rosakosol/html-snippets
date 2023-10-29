@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700|Public+Sans">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <link rel="stylesheet" href="landing-page.css">
     </head>
@@ -156,7 +157,7 @@
                     <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <button type="button" class="btn btn-link">Read more <i class="bi bi-arrow-right" style="font-size: 18px"></i></button>
                     </div>
                 </div>
                 <div class="col-md-6 card">
@@ -164,8 +165,8 @@
                     <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
+                    <button type="button" class="btn btn-link">Read more <i class="bi bi-arrow-right" style="font-size: 18px"></i></button>  
+                  </div>
                 </div>
             </div>
             <div class="row">
@@ -174,21 +175,20 @@
                     <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
+                    <button type="button" class="btn btn-link">Read more <i class="bi bi-arrow-right" style="font-size: 18px"></i></button>  
+                  </div>
                 </div>
                 <div class="col-md-6 card">
                     <img class="card-img-top" src="assets/img/blank-image.png" alt="Card image cap">
                     <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
+                    <button type="button" class="btn btn-link">Read more <i class="bi bi-arrow-right" style="font-size: 18px"></i></button>  
+                  </div>
                 </div>
-            </div>   
+            </div>  
+            <button type="button" class="btn btn-dark">View all events</button>  
             </div>
-
-            <button type="button" class="btn btn-dark">Read more</button> 
         </div>
         
         <!-- CONTACT FORM -->
@@ -222,16 +222,32 @@
                         <table class="table">
                             <tbody>
                               <tr>
+                                <td>Mon</td>
+                                <td>CLOSED</td>
+                              </tr>
+                              <tr>
                                 <td>Tue</td>
-                                <td>08:00 - 22:00</td>
+                                <td>12:00 - 22:00</td>
                               </tr>
                               <tr>
                                 <td>Wed</td>
-                                <td>08:00 - 22:00</td>
+                                <td>12:00 - 22:00</td>
                               </tr>
                               <tr>
                                 <td>Thu</td>
-                                <td>08:00 - 22:00</td>
+                                <td>12:00 - 22:00</td>
+                              </tr>
+                              <tr>
+                                <td>Fri</td>
+                                <td>12:00 - Late</td>
+                              </tr>
+                              <tr>
+                                <td>Sat</td>
+                                <td>08:00 - Late</td>
+                              </tr>
+                              <tr>
+                                <td>Sun</td>
+                                <td>08:00 - Late</td>
                               </tr>
                             </tbody>
                           </table>
@@ -241,39 +257,46 @@
                         <table class="table">
                             <tbody>
                               <tr>
-                                <td>Tue</td>
+                                <td><i class="bi bi-telephone-fill" style="font-size: 18px"></i>Ph: 02 1234 5678</td>
                               </tr>
                               <tr>
-                                <td>Wed</td>
+                                <td><i class="bi bi-calendar-check-fill" style="font-size: 18px"></i>General enquiries: <a
+                                  href="mailto:booking@restaurant.com.au">info@restaurant.com.au</a></td>
                               </tr>
                               <tr>
-                                <td>Thu</td>
+                                <td><i class="bi bi-envelope-fill" style="font-size: 18px"></i>Careers: <a
+                                  href="mailto:booking@restaurant.com.au">careers@restaurant.com.au</a></td>
                               </tr>
                               <tr>
-                                <td>Thu</td>
+                                <td><i class="bi bi-geo-alt-fill" style="font-size: 18px"></i>123 John St, Parramatta NSW 2150</td>
                               </tr>
                             </tbody>
                           </table>
                     </div>
                     <div class="row">
                       <div class="col-md-6">
-                        <h3>Contact</h3>
+                        <h3>Other Locations</h3>
                         <table class="table">
                             <tbody>
                               <tr>
-                                <td>Tue</td>
+                                <td><h3>Melbourne, Australia<i class="bi bi-arrow-right" style="font-size: 18px"></i></h3></td>
                               </tr>
                               <tr>
-                                <td>Address 123 john st</td>
+                                <td>123 Liverpool Ave</td>
                               </tr>
                               <tr>
-                                <td>Tue</td>
+                                <td><h3>Adelaide, Australia<i class="bi bi-arrow-right" style="font-size: 18px"></i></h3></td>
                               </tr>
                               <tr>
-                                <td>Address 123 john st</td>
+                                <td>42 Inka Ct</td>
                               </tr>
                             </tbody>
                           </table>
+                    </div>
+                    <div class="col-md-6">
+                      <i class="bi bi-facebook" style="font-size: 26px"></i>
+                      <i class="bi bi-instagram" style="font-size: 26px"></i>
+                      <button type="button" class="btn btn-light">Book a table</button>
                     </div>
                     </div>
                 </div>
