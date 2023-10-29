@@ -9,6 +9,7 @@ Extra extra large	xxl	≥1400px */
 
 * {
     box-sizing: border-box;
+    outline: 1px solid red;
 }
 
 html {
@@ -19,6 +20,7 @@ html {
 $primary: #432818;
 $secondary: #FAE7C9;
 $tertiary: #C51605;
+$bright: #80ed99;
 
 /* OUTER PADDING */
 $padding-sm: 2rem;
@@ -72,6 +74,10 @@ a {
   text-decoration: none;
 }
 
+.active {
+  opacity: 1.0 !important;
+}
+
 .divider {
     display: flex;
     width: 300px;
@@ -118,6 +124,12 @@ label, input, textarea, td {
 
 .btn-dark {
   background-color: $primary;
+  border: none;
+  border-radius: 1rem;
+}
+
+.btn-green {
+  background-color: $bright;
   border: none;
   border-radius: 1rem;
 }
@@ -176,6 +188,14 @@ label, input, textarea, td {
 .hamburger.is-active .hamburger-inner::after {
     /* CHANGE COLOUR OF ACTIVE AMBURGER */
     background-color: $secondary; 
+}
+
+.hamburger-black.is-active .hamburger-inner, .hamburger-black.is-active .hamburger-inner::before, .hamburger-black.is-active .hamburger-inner::after, .hamburger-black .hamburger-inner, .hamburger-black .hamburger-inner::before, .hamburger-black .hamburger-inner::after {
+  background-color: black;
+}
+
+.hamburger-white.is-active .hamburger-inner, .hamburger-white.is-active .hamburger-inner::before, .hamburger-white.is-active .hamburger-inner::after, .hamburger-white .hamburger-inner, .hamburger-white .hamburger-inner::before, .hamburger-white .hamburger-inner::after {
+  background-color: white;
 }
 
 .hamburger-box {
@@ -243,22 +263,52 @@ bottom: -10px;
   width: 100%;
   position: fixed;
   padding: 15px;
-  background-color: $primary;
   transition: ease 0.5s;
 }
 
-.navbar a {
+.navbar-colour {
+  background-color: $primary;
+}
+
+.navbar-colour a {
   color: white;
 }
 
-.navbar .nav-item a {
+.navbar-colour .nav-item a {
   color: white;
+  opacity: 0.5;
+}
+
+.navbar-white {
+  background-color: white;
+}
+
+.navbar-white a {
+  color: black;
+}
+
+.navbar-white .nav-item a {
+  color: black;
   opacity: 0.5;
 }
 
 .navbar .nav-item a:hover {
   opacity: 1.0;
   transition: ease 0.5s;
+}
+
+.navbar-transparent {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-transparent a {
+  color: white;
+}
+
+.navbar-transparent .nav-item a {
+  color: white;
+  opacity: 0.5;
 }
 
 .show {
@@ -313,6 +363,22 @@ bottom: -10px;
     color: white;
 }
 
+/* LANDING PAGE 2 */
+.landing-page.quarter, .landing-page.quarter img {
+  height: 70vh;
+}
+
+.landing-page.quarter img {
+  filter: opacity(50%);
+}
+
+.landing-page-inner.quarter {
+  top: calc(35vh - 90px);
+  text-align: left;
+  width: 80%;
+  left: 10%;
+}
+
 /* CARD, COLUMNS AND TABLE SPACING */
 .card-group {
   margin-top: $padding-sm;
@@ -353,9 +419,81 @@ bottom: -10px;
   padding: 1rem;
 }
 
+
 .col-md-6 img {
   width: 100%;
 }
+
+/* CAROUSEL */
+#carousel-container {
+  height: 500px;
+  text-align: center;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-inner img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.carousel-indicators .active {
+  background-color: black;
+}
+
+.carousel-indicators li {
+  position: relative;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-indicators.carousel-round li {
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+}
+
+.carousel-indicators.carousel-round {
+  position: relative;
+  top: 20px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  color: black;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.logo-box {
+  text-align: center;
+}
+
+.logo-box .row {
+  justify-content: center;
+}
+
+.logo-box img {
+  width: 200px;
+}
+
+.logo-box .col-md-4 {
+  margin: 0 0 $padding-sm 0;
+  padding: 0;
+}
+
 
 
 
@@ -414,6 +552,10 @@ footer a:hover {
 
 footer .col-md-6 {
   padding: $padding-sm;
+}
+
+.socials-box {
+  margin-top: $padding-sm;
 }
 
 .copyright-banner {
