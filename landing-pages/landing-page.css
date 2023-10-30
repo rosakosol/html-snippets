@@ -410,10 +410,6 @@ label, input, textarea, td {
   padding: 1rem;
 }
 
-.card:not(:last-child) {
-  justify-content: space-between;
-}
-
 .card:not(:last-child), .col-sm-4:not(:last-child), .col-md-6:not(:last-child) {
   margin-bottom: 2rem;
 }
@@ -462,8 +458,9 @@ label, input, textarea, td {
 
 .carousel-indicators.carousel-round li {
   border-radius: 100%;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
 }
 
 .carousel-indicators.carousel-round {
@@ -483,6 +480,108 @@ label, input, textarea, td {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
+/* CAROUSEL MULTIPLE CARD VIEW */
+.wrapper {
+  width: 70%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.wrapper i {
+  top: 50%;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  color: black;
+  z-index: 100;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+#left {
+  left: -51px;
+}
+
+#right {
+  right: -60px;
+}
+
+.wrapper .carousel-multiple {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 33.3333333333%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.wrapper ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0px;
+}
+
+.carousel-multiple::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-multiple.no-transition {
+  scroll-behavior: auto;
+}
+
+.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.dragging .card {
+  cursor: grab;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.carousel-multiple :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-multiple .card {
+  scroll-snap-align: start;
+  height: 350px;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.carousel-multiple .card > * {
+  margin-bottom: 1rem;
+}
+
+.carousel-multiple .card .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel-multiple {
+    grid-auto-columns: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .wrapper .carousel-multiple {
+    grid-auto-columns: 100%;
+  }
+}
 .logo-box {
   text-align: center;
 }
