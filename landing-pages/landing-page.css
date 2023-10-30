@@ -9,7 +9,6 @@ Extra large	xl	≥1200px
 Extra extra large	xxl	≥1400px */
 * {
   box-sizing: border-box;
-  outline: 1px solid red;
 }
 
 html {
@@ -426,6 +425,15 @@ label, input, textarea, td {
   width: 100%;
 }
 
+/* LANDING PAGE 3 FIVE GRID */
+.five-grid .col-md-4 {
+  padding: 0;
+}
+
+.col-md-4 > * {
+  padding: 0.5rem;
+}
+
 /* CAROUSEL */
 #carousel-container {
   height: 500px;
@@ -553,7 +561,7 @@ label, input, textarea, td {
 
 .carousel-multiple .card {
   scroll-snap-align: start;
-  height: 350px;
+  height: 400px;
   list-style: none;
   background: #fff;
   cursor: pointer;
@@ -572,7 +580,8 @@ label, input, textarea, td {
      object-fit: cover;
 }
 
-@media screen and (max-width: 900px) {
+/* CHANGE MULTI CARD CAROUSEL TO 2 CARDS ON SMALLER SCREENS */
+@media screen and (max-width: 768px) {
   .wrapper .carousel-multiple {
     grid-auto-columns: 50%;
   }
@@ -582,6 +591,7 @@ label, input, textarea, td {
     grid-auto-columns: 100%;
   }
 }
+/* LOGO BOX */
 .logo-box {
   text-align: center;
 }
@@ -597,6 +607,58 @@ label, input, textarea, td {
 .logo-box .col-md-4 {
   margin: 0 0 2rem 0;
   padding: 0;
+}
+
+/* EMAIL CTA */
+.input-group {
+  width: 500px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.form-control {
+  height: 100%;
+  padding: 10px 18px;
+  font-size: 14px;
+  border: none;
+}
+
+.home-newsletter {
+  padding: 80px 0;
+  background: #FAE7C9;
+}
+
+.home-newsletter .single {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.home-newsletter .single h2 {
+  font-size: 22px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.home-newsletter .single .form-control {
+  height: 50px;
+  background: rgba(255, 255, 255, 0.6);
+  border-color: transparent;
+  border-radius: 20px 0 0 20px;
+}
+
+.home-newsletter .single .form-control:focus {
+  box-shadow: none;
+  border-color: #243c4f;
+}
+
+.home-newsletter .single .btn {
+  min-height: 50px;
+  border-radius: 0 20px 20px 0;
+  background: #243c4f;
+  color: #fff;
 }
 
 /* FORMS */
@@ -630,6 +692,19 @@ input[type=submit]:hover {
   transition: ease 0.2s;
 }
 
+/* FAQ ACCORDION  */
+.accordion .btn-link {
+  color: #432818;
+}
+
+.accordion .btn-link:hover, .accordion .btn-link:active, .accordion .btn-link:focus {
+  text-decoration: none;
+}
+
+.accordion .card {
+  margin-bottom: 0;
+}
+
 /* FOOTER */
 footer {
   background: #432818;
@@ -654,6 +729,27 @@ footer a:hover {
 
 footer .col-md-6 {
   padding: 2rem;
+}
+
+footer ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+footer li {
+  display: block;
+}
+
+/* LANDING PAGE 3 FOOTER */
+.footer-white {
+  background: white;
+  color: black;
+}
+
+.footer-white .socials-box {
+  margin-top: 0;
 }
 
 .socials-box {
