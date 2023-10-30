@@ -316,6 +316,12 @@ label, input, textarea, td {
   padding: 0;
 }
 
+/* LANDING PAGE 4 CENTER NAVBAR */
+.navbar-center {
+  justify-content: center;
+  width: 100%;
+}
+
 .container {
   margin: 4rem auto;
   padding: 2rem;
